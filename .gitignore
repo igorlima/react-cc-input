@@ -1,0 +1,10 @@
+node_modules
+lib/
+.DS_Store
+.idea/
+*.swp
+*.log
+Session.vim
+package-lock.json
+yarn.lock
+yarn-error.log

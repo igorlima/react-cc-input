@@ -1,0 +1,84 @@
+{
+  "name": "@igorlima-draft/react-cc-input",
+  "version": "0.0.1",
+  "description": "A credit/debit card form for React",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorlima/react-credit-card-input.git"
+  },
+  "author": "igorlima <lima.igorribeirolima@gmail.com> (https://github.com/igorlima)",
+  "main": "lib/index.js",
+  "keywords": [
+    "credit",
+    "debit",
+    "card",
+    "input",
+    "cvv"
+  ],
+  "scripts": {
+    "build": "rimraf lib && rollup -c rollup.config.js",
+    "prepublish": "npm run build",
+    "lint": "eslint src/",
+    "fix": "npm run lint -- --fix && npm run prettier",
+    "prettier": "prettier --config .prettierrc --write \"src/**/*.js\"",
+    "prettier:list-diff": "prettier --config .prettierrc --list-different 'src/**/*.js'",
+    "storybook": "start-storybook -p 9002 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o docs/",
+    "test": "npm run lint && npm run prettier:list-diff"
+  },
+  "dependencies": {
+    "@igorlima-draft/react-credit-card-input": "0.0.0-separation-of-duties.7"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.2.15",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.11.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "prettier": "^1.8.2",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.54.1",
+    "rollup-plugin-babel": "^3.0.3"
+  },
+  "peerDependencies": {
+    "react": "^0.14.9 || ^15.3.0 || ^16.0.0-rc || ^16.0",
+    "react-dom": "^0.14.9 || ^15.3.0 || ^16.0.0-rc || ^16.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "plugins": [
+      "prettier",
+      "react"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "prettier/prettier": "error",
+      "jsx-a11y/href-no-hash": 0
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/igorlima/react-cc-input/issues"
+  },
+  "homepage": "https://github.com/igorlima/react-cc-input/blob/master/README.md",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  }
+}
